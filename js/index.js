@@ -55,16 +55,6 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 //     nav.textContent = siteContent.nav;
 // })
 
-let navLinks = document.querySelectorAll('nav a');
-navLinks[0].textContent = siteContent.nav["nav-item-1"];
-navLinks[1].textContent = siteContent.nav["nav-item-2"];
-navLinks[2].textContent = siteContent.nav["nav-item-3"];
-navLinks[3].textContent = siteContent.nav["nav-item-4"];
-navLinks[4].textContent = siteContent.nav["nav-item-5"];
-navLinks[5].textContent = siteContent.nav["nav-item-6"];
-
-
-
 const newNavLinkA = document.createElement("a");
 const newNavLinkB = document.createElement("a");
 
@@ -74,6 +64,15 @@ newNavLinkB.textContent = "Russell";
 const nav = document.querySelector("nav");
 
 nav.append(newNavLinkA, newNavLinkB);
+
+let navLinks = document.querySelectorAll('nav a');
+navLinks[0].textContent = siteContent.nav["nav-item-1"];
+navLinks[1].textContent = siteContent.nav["nav-item-2"];
+navLinks[2].textContent = siteContent.nav["nav-item-3"];
+navLinks[3].textContent = siteContent.nav["nav-item-4"];
+navLinks[4].textContent = siteContent.nav["nav-item-5"];
+navLinks[5].textContent = siteContent.nav["nav-item-6"];
+
 
 navLinks.forEach(element => {
     element.style.color = 'teal';
