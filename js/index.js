@@ -38,23 +38,6 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-let ctaHeader = document.querySelector(".cta-text h1");
-ctaHeader.textContent = siteContent.cta["h1"];
-
-let ctaButton = document.querySelector(".cta-text button");
-ctaButton.textContent = siteContent.cta["button"];
-
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
-
-
-// Array.from(document.querySelectorAll('nav a')).forEach(nav => {
-//     nav.textContent = siteContent.nav;
-// })
-
 const newNavLinkA = document.createElement("a");
 const newNavLinkB = document.createElement("a");
 
@@ -73,10 +56,20 @@ navLinks[3].textContent = siteContent.nav["nav-item-4"];
 navLinks[4].textContent = siteContent.nav["nav-item-5"];
 navLinks[5].textContent = siteContent.nav["nav-item-6"];
 
-
 navLinks.forEach(element => {
     element.style.color = 'teal';
 })
+
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+document.querySelector(".cta-text h1").innerHTML = "Dom<br>Is<br>Awesome";
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent.cta["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let featuresHeader = document.querySelector(".top-content .text-content h4");
 featuresHeader.textContent = siteContent["main-content"]["features-h4"];
@@ -114,8 +107,8 @@ visionContent.textContent = siteContent["main-content"]["vision-content"];
 let contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
 
-let contactAddress = document.querySelector(".contact p");
-contactAddress.textContent = siteContent["contact"]["address"];
+document.querySelector(".contact p").innerHTML = "123 Way 456 Street <br>Somewhere,USA";
+// contactAddress.textContent = siteContent["contact"]["address"];
 
 let contactPhone = document.querySelector(".contact p:nth-child(3)");
 contactPhone.textContent = siteContent["contact"]["phone"];
